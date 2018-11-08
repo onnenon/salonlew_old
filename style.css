@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+@import url('https://fonts.googleapis.com/css?family=Overpass+Mono:300,400');
+
+body, html {
+    display: flex;
+    color: #F8F8F2;
+    font-size: 1em;
+    background-color: #272C34;
+    font-family: 'Titillium Web', 'Open Sans', sans-serif;
+    padding: .5em;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.title {
+    display: flex;
+    flex-direction: row;
+    user-select: none;
+    font-family: 'Overpass Mono', monospace;
+    font-size: 4em;
+    font-weight: 300;
+    letter-spacing: .01em;
+}
+.links{
+    flex-direction: row;
+    font-size: 1.2em;
+    padding: .3em;
+    text-align: center;
+}
+mark.prompt {
+    color: #C678DD;
+    background: none;
+}
+#cursor {
+    animation: blink 1.2s step-end infinite;
+}
+a:link {
+    color: rgb(197, 200, 206);
+    text-decoration: none;
+    padding: 1em;
+}
+a:hover {
+    color: rgb(230, 233, 239);
+}
+a:visited:hover {
+    color: rgb(230, 233, 239);
+}
+a:visited {
+    color: rgb(197, 200, 206);
+    text-decoration: none;
+}
+@keyframes blink {
+    from, to {
+        color: transparent;
+      }
+      50% {
+        color: rgb(168, 171, 177);
+      }
+    }
