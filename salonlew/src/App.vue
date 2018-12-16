@@ -1,28 +1,41 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <TopBar id="TopBar"/>
+    <NavBar/>
+    <index msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import index from "./components/index.vue";
+import NavBar from "./components/NavBar.vue";
+import TopBar from "./components/TopBar.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    HelloWorld
+    NavBar,
+    TopBar,
+    index
   }
-}
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  left: 0;
+  top: 0;
+  position: absolute;
+  min-width: 100vw;
+}
+@media screen and (max-width: 770px) {
+  #TopBar {
+    display: none;
+  }
 }
 </style>
