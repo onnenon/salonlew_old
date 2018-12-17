@@ -105,6 +105,7 @@ export default {
   flex: 0 1 20%;
   flex-wrap: wrap;
   align-items: center;
+  height: 3.5em;
 }
 .social-links {
   display: flex;
@@ -120,9 +121,11 @@ a {
   display: flex;
   text-decoration: none;
   color: #ffffff;
+  padding: 1em;
 }
-a:active {
+.router-link-exact-active {
   color: #853179;
+  border-top: 3px solid #853179;
 }
 a:hover {
   color: #853179;
