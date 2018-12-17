@@ -81,7 +81,7 @@ export default {
 .bar {
   background-color: #282327;
   display: flex;
-  height: 3.5em;
+  height: 3.8em;
   align-items: center;
   flex: 0 1 100vw;
   flex-wrap: wrap;
@@ -105,7 +105,7 @@ export default {
   flex: 0 1 20%;
   flex-wrap: wrap;
   align-items: center;
-  height: 3.5em;
+  height: 3.8em;
 }
 .social-links {
   display: flex;
@@ -121,7 +121,7 @@ a {
   display: flex;
   text-decoration: none;
   color: #ffffff;
-  padding: 1em;
+  padding: 1.2em;
 }
 .router-link-exact-active {
   color: #853179;
@@ -183,7 +183,10 @@ a:hover {
     align-content: center;
     justify-content: center;
   }
-
+  .router-link-exact-active {
+      border-top: 0;
+      border-left: 5px solid #853170;
+  }
   img {
     height: 3em;
     width: auto;
