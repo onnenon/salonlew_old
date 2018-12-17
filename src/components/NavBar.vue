@@ -25,6 +25,11 @@
         <router-link v-on:click.native='toggle_menu' :to='value'>{{ key }}</router-link>
       </div>
       <div class='mobile-social'>
+        <div class='mobile-social-link'>
+          <a href='tel:515-273-5391'>
+            <i class='fa fa-phone'/>
+          </a>
+        </div>
         <div class='mobile-social-link' v-for='l in social_links'>
           <a :href='l.link '>
             <i :class='l.icon'/>
