@@ -2,23 +2,21 @@
   <div id="app">
     <TopBar id="TopBar"/>
     <NavBar/>
-    <index msg="Welcome to Your Vue.js App"/>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import index from "./components/index.vue";
-import NavBar from "./components/NavBar.vue";
-import TopBar from "./components/TopBar.vue";
+import NavBar from './components/NavBar.vue'
+import TopBar from './components/TopBar.vue'
 
 export default {
-  name: "app",
+  name: 'App',
   components: {
     NavBar,
-    TopBar,
-    index
+    TopBar
   }
-};
+}
 </script>
 
 <style>
@@ -27,11 +25,11 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  left: 0;
-  top: 0;
-  position: absolute;
-  min-width: 100vw;
+  color: #2d2d2d;
+  min-width: 320px;
+}
+body {
+  margin: 0;
 }
 @media screen and (max-width: 770px) {
   #TopBar {

@@ -22,33 +22,30 @@
 
 <script>
 export default {
-  name: "TopBar"
-};
+  name: 'TopBar'
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .wrapper {
   display: flex;
-  flex-direction: row;
   padding: 1em;
   max-width: 961px;
   margin: 0 auto;
-  height: 5em;
+  height: 4.5em;
   align-items: flex-end;
   justify-content: space-between;
   font-size: 0.85em;
 }
 .links {
   display: flex;
-  flex-direction: row;
   justify-content: flex-end;
 }
 .address,
 .phone,
 .email {
   display: flex;
-  flex-direction: row;
   text-align: left;
   color: #282327;
   padding-left: 2em;
