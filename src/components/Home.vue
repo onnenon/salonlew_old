@@ -66,7 +66,7 @@ export default {
   background-image: url("../assets/hair-header.jpg");
   background-size: cover;
   display: flex;
-  flex: 0 1 100vw;
+  flex: 0 1 90vh;
   min-height: 85vh;
   justify-content: center;
 }
