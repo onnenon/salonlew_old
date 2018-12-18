@@ -93,8 +93,7 @@ h3 {
 }
 .home {
   display: flex;
-  background-image: url("../assets/p1.jpg");
-  background-size: cover;
+  background: #282327;
   flex: 1 1 100vw;
   min-height: 85vh;
   justify-content: center;
