@@ -1,38 +1,38 @@
 <template>
-  <div class='navigation'>
-    <div class='bar'>
-      <div class='nav-wrapper'>
-        <div class='nav-links'>
-          <div class='nav-link' v-for='(value,key) in nav_links'>
-            <router-link :to='value'>{{ key }}</router-link>
+  <div class="navigation">
+    <div class="bar">
+      <div class="nav-wrapper">
+        <div class="nav-links">
+          <div class="nav-link" v-for="(value,key) in nav_links">
+            <router-link :to="value">{{ key }}</router-link>
           </div>
         </div>
-        <div class='social-links'>
-          <div v-for='l in social_links'>
-            <a :href='l.link '>
-              <i :class='l.icon'/>
+        <div class="social-links">
+          <div v-for="l in social_links">
+            <a :href="l.link ">
+              <i :class="l.icon"/>
             </a>
           </div>
         </div>
       </div>
-      <div class='mobile-nav-wrapper'>
-        <img alt='salon lew logo' src='../assets/salonlew_logo_white_small.png'>
-        <i :class='mobile_icon[mobile_icon_index]' @click='toggle_menu'/>
+      <div class="mobile-nav-wrapper">
+        <img alt="salon lew logo" src="../assets/salonlew_logo_white_small.png">
+        <i :class="mobile_icon[mobile_icon_index]" @click="toggle_menu"/>
       </div>
     </div>
-    <div class='mobile-link-wrapper' v-show='display_menu'>
-      <div class='mobile-link' v-for='(value,key) in nav_links'>
-        <router-link v-on:click.native='toggle_menu' :to='value'>{{ key }}</router-link>
+    <div class="mobile-link-wrapper" v-show="display_menu">
+      <div class="mobile-link" v-for="(value,key) in nav_links">
+        <router-link v-on:click.native="toggle_menu" :to="value">{{ key }}</router-link>
       </div>
-      <div class='mobile-social'>
-        <div class='mobile-social-link'>
-          <a href='tel:515-273-5391'>
-            <i class='fa fa-phone'/>
+      <div class="mobile-social">
+        <div class="mobile-social-link">
+          <a href="tel:515-273-5391">
+            <i class="fa fa-phone"/>
           </a>
         </div>
-        <div class='mobile-social-link' v-for='l in social_links'>
-          <a :href='l.link '>
-            <i :class='l.icon'/>
+        <div class="mobile-social-link" v-for="l in social_links">
+          <a :href="l.link ">
+            <i :class="l.icon"/>
           </a>
         </div>
       </div>
@@ -42,43 +42,43 @@
 
 <script>
 export default {
-  name: 'NavBar',
-  data () {
+  name: "NavBar",
+  data() {
     return {
       display_menu: false,
-      mobile_icon: ['fas fa-bars', 'fas fa-times'],
+      mobile_icon: ["fas fa-bars", "fas fa-times"],
       mobile_icon_index: 0,
       social_links: {
         facebook: {
-          icon: 'fab fa-facebook-f',
-          link: 'https://facebook.com/salonlew'
+          icon: "fab fa-facebook-f",
+          link: "https://facebook.com/salonlew"
         },
         twitter: {
-          icon: 'fab fa-twitter',
-          link: 'https://twitter.com/salon_lew'
+          icon: "fab fa-twitter",
+          link: "https://twitter.com/salon_lew"
         },
         instagram: {
-          icon: 'fab fa-instagram',
-          link: 'https://instagram.com/salon.lew'
+          icon: "fab fa-instagram",
+          link: "https://instagram.com/salon.lew"
         }
       },
       nav_links: {
-        HOME: '/',
-        'ABOUT US': '/about',
-        SERVICES: '/services',
-        PRODUCTS: '/products',
-        CONTACT: '/contact'
+        HOME: "/",
+        "ABOUT US": "/about",
+        SERVICES: "/services",
+        PRODUCTS: "/products",
+        CONTACT: "/contact"
       }
-    }
+    };
   },
   methods: {
-    toggle_menu () {
-      console.log('toggled')
-      this.mobile_icon_index = (this.mobile_icon_index + 1) % 2
-      this.display_menu = !this.display_menu
+    toggle_menu() {
+      console.log("toggled");
+      this.mobile_icon_index = (this.mobile_icon_index + 1) % 2;
+      this.display_menu = !this.display_menu;
     }
   }
-}
+};
 </script>
 
 <!-- Add 'scoped' attribute to limit CSS to this component only -->
@@ -142,7 +142,7 @@ a:hover {
 .mobile-link-wrapper {
   display: none;
 }
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 805px) {
   .nav-wrapper {
     display: none;
   }
@@ -189,8 +189,8 @@ a:hover {
     justify-content: center;
   }
   .router-link-exact-active {
-      border-top: 0;
-      border-left: 5px solid #853170;
+    border-top: 0;
+    border-left: 5px solid #853170;
   }
   img {
     height: 3em;

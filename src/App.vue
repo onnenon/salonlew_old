@@ -7,16 +7,16 @@
 </template>
 
 <script>
-import NavBar from './components/NavBar.vue'
-import TopBar from './components/TopBar.vue'
+import NavBar from "./components/NavBar.vue";
+import TopBar from "./components/TopBar.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     NavBar,
     TopBar
   }
-}
+};
 </script>
 
 <style>
@@ -31,7 +31,7 @@ export default {
 body {
   margin: 0;
 }
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 805px) {
   #TopBar {
     display: none;
   }
