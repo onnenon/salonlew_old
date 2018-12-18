@@ -15,6 +15,39 @@
         </div>
       </div>
     </div>
+    <div class="about">
+      <div class="hours-wrapper">
+        <div class="hours-inner-col">
+          <h3>SALON HOURS</h3>
+          <div class="hours-inner">
+            <div class="hours">
+              <div class="hour" v-for="(value,key) in hours">
+                {{key}}
+                <br>
+              </div>
+            </div>
+            <div class="times">
+              <div class="time" v-for="(value,key) in hours">
+                {{value}}
+                <br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-wrapper">
+        <div class="about-wrapper-col">
+          <p>
+            salon lew is Laine’s baby. Laine Elizabeth Wright—"lew"—is the owner of salon lew, and has envisioned running
+            her own business for as long as she can remember. Keep clients happy, and making people laugh have always been
+            a top priority to Laine. She loves keeping up with the newest trends for each season! Stop in today and book
+            your appointment with Laine!
+          </p>
+          <img src="../assets/i2.jpg">
+          <h3>Laine Wright</h3>
+        </div>
+      </div>
+    </div>
     <div class="map">
       <iframe
         class="actAsDiv"
@@ -32,19 +65,37 @@
 
 <script>
 export default {
-  name: "Home"
+  name: "Home",
+  data() {
+    return {
+      hours: {
+        Monday: "noon - 5 pm",
+        Tuesday: "9 am - 7 pm",
+        Wednesday: "10 am - 8 pm",
+        Thursday: "9 am - 7 pm",
+        Friday: "9 am - 5 pm",
+        Saturday: "8 am - 3 pm",
+        Sunday: "Closed"
+      }
+    };
+  }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
 
+h3 {
+  margin: 0;
+  padding: 1em;
+}
 .home {
   display: flex;
   background-image: url("../assets/p1.jpg");
   background-size: cover;
-  flex: 0 1 100vw;
+  flex: 1 1 100vw;
   min-height: 85vh;
   justify-content: center;
   flex-direction: column;
@@ -61,6 +112,71 @@ export default {
   justify-content: space-between;
   font-size: 0.85em;
   flex: 1 1 15em;
+}
+.hours-inner-col {
+  display: flex;
+  flex-direction: column;
+}
+.hours-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: #282327;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  padding: 2em;
+  flex: 0 1 40vw;
+}
+.about-wrapper-col {
+  max-width: 600px;
+  padding: 2em;
+}
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 50vw;
+  background: #f4f4f4;
+  min-height: 21em;
+  align-items: flex-start;
+  justify-content: center;
+}
+.about-wrapper p {
+  color: #7c7c7c;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5em;
+  font-size: 0.9em;
+  display: flex;
+  flex: 0 1 60%;
+  padding: 2em;
+  margin: 0;
+}
+.about-wrapper img {
+  width: 100px;
+  border-radius: 150px;
+}
+.about-wrapper h3 {
+  font-family: "Pacifico", sans-serif;
+  font-weight: 400;
+  font-feature-settings: "liga";
+}
+.hours-inner {
+  display: flex;
+  padding: 1em;
+  font-size: 0.9em;
+}
+.hour,
+.time {
+  padding: 0.2em 1em;
+  text-align: left;
+}
+.about {
+  display: flex;
+  flex: 0 1 auto;
+  justify-content: space-between;
+  align-items: center;
+  background: #282327;
+  flex-wrap: wrap;
+  min-height: 21em;
 }
 .hero {
   background-image: url("../assets/hair-header.jpg");
@@ -86,6 +202,10 @@ export default {
   font-size: 1.2em;
   font-family: "Open Sans", sans-serif;
 }
+.map {
+  display: flex;
+  flex: 1 1 auto;
+}
 @media screen and (max-width: 805px) {
   .home-wrapper {
     background: rgba(0, 0, 0, 0.7);
@@ -94,6 +214,19 @@ export default {
     color: #949494;
     width: 60%;
     font-size: 1em;
+  }
+  .hours-wrapper {
+    flex: 0 1 100%;
+    justify-content: center;
+  }
+  .about-wrapper {
+    flex: 0 1 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .hours,
+  .time {
+    font-size: 0.7em;
   }
 }
 </style>
