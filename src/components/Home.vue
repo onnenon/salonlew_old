@@ -189,7 +189,7 @@ h3 {
 .hero img {
   width: 20em;
   max-width: 90vw;
-  padding: 8em 1em 1em 0;
+  padding: 5em 1em 1em 0;
 }
 .hero-text {
   padding: 1em;
@@ -218,6 +218,7 @@ h3 {
   .hours-wrapper {
     flex: 0 1 100%;
     justify-content: center;
+    align-items: center;
   }
   .about-wrapper {
     flex: 0 1 100%;
