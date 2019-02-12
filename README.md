@@ -1,6 +1,5 @@
-# vue-router
-
-> A Vue.js project
+# A remake of Salonlew.com. 
+VueJS on the frontend, dockerized go webserver container for deployment.
 
 ## Build Setup
 
