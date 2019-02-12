@@ -1,5 +1,5 @@
-# A remake of Salonlew.com. 
-VueJS on the frontend, dockerized go webserver container for deployment.
+# A Remake of Salonlew.com
+VueJS on the frontend, Nginx container for deployment.
 
 ## Build Setup
 
